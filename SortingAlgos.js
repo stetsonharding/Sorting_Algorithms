@@ -25,3 +25,5 @@ function bubbleSort(arr) {
 }
 
 bubbleSort(testArr);
+
+/* Merge Sort */
