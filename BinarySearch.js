@@ -4,11 +4,16 @@
 If they are not equal, the half in which the target cannot lie is eliminated and the search continues on the remaining half, again taking the middle element 
 to compare to the target value, and repeating this until the target value is found. ONLY WORKS WHEN ARRAY IS SORTED*/
 
-function BinarySeach(arr) {
-  let start = 0;
-  let end = arr.length - 1;
+function BinarySearch(arr) {
+  let left = 0;
+  let right = arr.length - 1;
 
-  while (start < end) {}
+  while (left < right) {
+    let mid = Math.floor(left + right / 2);
+
+    console.log(mid);
+    left++;
+  }
 }
 
 BinarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
