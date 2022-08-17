@@ -18,12 +18,10 @@ function mergeSort(arr) {
     return arr;
   }
 
-  //life side of array
-  const left = arr.slice(0, middle);
-  //right side of array
-  const right = arr.splice(middle, arr.length - 1);
-
-  return merge(mergeSort(left), mergeSort(right));
+  //getting left side array, passing whats left over in second arg.
+  const left = arr.splice(0, middle);
+  
+  return merge(mergeSort(left), mergeSort(arr));
 }
 
 //Sorting the array
@@ -44,3 +42,47 @@ function merge(leftArr, rightArr) {
 }
 
 console.log(mergeSort([2, 1, 9, 4, 3]));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
