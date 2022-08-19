@@ -5,37 +5,22 @@ at the correct position in the sorted part.  BEST FOR SMALL DATA SETS, AND PARTI
 //Time Complextiy = O(n2)
 
 function InsertionSort(arr) {
-    
-    for(let i = 1; i < arr.length; i++) {
+  for (let i = 1; i < arr.length; i++) {
+    let currentElement = arr[i]; // 3
 
-        let currentElement = arr[i] // 3
+    //pointer to compair currentElement and the element behind it.
+    let j = i - 1; // 1
 
-        //pointer to compair currentElement and the element behind it.
-        let j = i - 1; // 1
-
-        //Move elements for aa[0 ... i - 1] that are greater than curr, 
-        //to one position ahead of their current position
-        while(j > -1 && arr[j] > currentElement) {
-            arr[j + 1] = arr[j]
-            j--
-        }
-
-        arr[j + 1] = currentElement; 
-        
+    //Move elements for aa[0 ... i - 1] that are greater than curr,
+    //to one position ahead of their current position
+    while (j > -1 && arr[j] > currentElement) {
+      arr[j + 1] = arr[j];
+      j--;
     }
-    return arr;
+    //elements stay in same place.
+    arr[j + 1] = currentElement;
+  }
+  return arr;
 }
 
-console.log(InsertionSort([5,6,3,1,8]))
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(InsertionSort([5, 6, 3, 1, 8]));
