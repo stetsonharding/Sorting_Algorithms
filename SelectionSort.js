@@ -11,10 +11,28 @@ Time Complextiy: O(n2);
 
 
 Selection Sort is good for checking if everything is already sorted. It's also good to use when memory space is limited. This is beacuse unlike other sorting algorithms, selection sort doesin't 
-go around sqapping things unil the very end, resulting in less temporoary storage space used.
+go around swapping things until the very end, resulting in less temporary storage space used.
 
 */
 
-function SelectionSort() {}
+function SelectionSort(arr) {
+  let index = 0;
 
-SelectionSort([22, 12, 64, 11]);
+  for (let i = 0; i < arr.length; i++) {
+    index = i;
+
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[index]) {
+        index = j;
+
+        let temp = arr[index];
+        arr[index] = arr[i];
+        arr[i] = temp;
+      }
+    }
+  }
+
+  return arr;
+}
+
+console.log(SelectionSort([22, 12, 64, 11]));
