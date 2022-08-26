@@ -18,13 +18,16 @@ go around swapping things until the very end, resulting in less temporary storag
 function SelectionSort(arr) {
   let index = 0;
 
+  //One bye one move boundary of unsorted subarray
   for (let i = 0; i < arr.length; i++) {
+    //find the minimum element in unsorted array
     index = i;
 
     for (let j = i + 1; j < arr.length; j++) {
       if (arr[j] < arr[index]) {
         index = j;
 
+        //Swap
         let temp = arr[index];
         arr[index] = arr[i];
         arr[i] = temp;
